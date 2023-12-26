@@ -7,8 +7,6 @@ describe('Get spread for all markets test suite', async () => {
     request(app)
       .get(`/spread`)
       .expect(200)
-      .end(function(err, res) {
-        if (err) throw err;
-      });
+      .end();
   });
 });

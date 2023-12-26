@@ -8,8 +8,6 @@ describe('Set spread alert test suite', async () => {
       .put(`/spread/alert`)
       .send({ spread: 50 })
       .expect(200)
-      .end(function(err, res) {
-        if (err) throw err;
-      });
+      .end();
   });
 });

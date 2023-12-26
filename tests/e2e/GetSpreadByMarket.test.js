@@ -8,9 +8,7 @@ describe('Get spread by market test suite', async () => {
     request(app)
       .get(`/spread/${marketId}`)
       .expect(200)
-      .end(function(err, res) {
-        if (err) throw err;
-      });
+      .end();
   });
   
   await it('should return 404 for a non-existent market', async () => {
@@ -18,8 +16,6 @@ describe('Get spread by market test suite', async () => {
     request(app)
       .get(`/spread/${marketId}`)
       .expect(404)
-      .end(function(err, res) {
-        if (err) throw err;
-      });
+      .end();
   });
 });
